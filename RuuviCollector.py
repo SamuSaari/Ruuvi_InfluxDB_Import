@@ -9,8 +9,9 @@ app = Flask(__name__)
 INFLUX_TOKEN = os.environ.get("INFLUX_TOKEN")
 ORG_NAME = os.environ.get("ORG")
 DB_BUCKET = os.environ.get("BUCKET")
+INFLUX_URL = os.environ.get("INFLUXURL")
 
-client = InfluxDBClient(url="https://influx.mittauslaskenta.com", token=INFLUX_TOKEN)
+client = InfluxDBClient(url=INFLUXURL, token=INFLUX_TOKEN)
 org = ORG_NAME
 bucket = DB_BUCKET
 
