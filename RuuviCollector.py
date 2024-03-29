@@ -11,7 +11,7 @@ ORG_NAME = os.environ.get("ORG")
 DB_BUCKET = os.environ.get("BUCKET")
 INFLUX_URL = os.environ.get("INFLUXURL")
 
-client = InfluxDBClient(url=INFLUXURL, token=INFLUX_TOKEN)
+client = InfluxDBClient(url=INFLUX_URL, token=INFLUX_TOKEN)
 org = ORG_NAME
 bucket = DB_BUCKET
 write_api = client.write_api(write_options=SYNCHRONOUS)
